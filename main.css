@@ -1,0 +1,298 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    color: white;
+}
+
+header {
+    height: 70px;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.container {
+    position: relative;
+    max-width: 96%;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+.form , .form-label {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.checkbox {
+    position: absolute;
+    right: 0;
+    display: none !important;
+    visibility: hidden;
+}
+
+.fa-bars {
+    position: absolute;
+    right: 0;
+    display: none !important;
+}
+
+.fa-xmark {
+    position: absolute;
+    right: 0;
+    display: none !important;
+    visibility: hidden;
+}
+
+
+.nav {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between !important;
+    align-items: center;
+    width: 100%;
+}
+
+.nav-form__list {
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+}
+
+.nav-form__list-item {
+    list-style: none;
+    font-size: 18px;
+}
+
+.right-nav {
+    margin-right: 10px;
+    display: flex;
+    width: 34%;
+}
+
+.phone-number a {
+    font-size: 28px;
+}
+
+.phone-number {
+    margin-right: auto;
+}
+
+.fa-brands {
+    font-size: 28px;
+}
+
+.icons{
+    display: flex; 
+    justify-content: space-between;
+
+}
+
+.main {
+    background-image: url('./image/hero-bg1.webp');
+    height: 100vh;
+    background-size: cover;
+    position: relative;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    left: 0;
+}
+
+@media screen and (max-width:980px) {
+
+
+    header{
+        background-color: black;
+    }
+
+    .nav {
+        display: none;
+        z-index: 99;
+    }
+
+    .form-label{
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+
+    .bars{
+        font-size: 28px;
+        top: 20px;
+        display: inline-block !important;
+    }
+    
+    .checkbox{
+        display: inline-block !important;
+        position: absolute;
+
+    }
+    
+    .fa-xmark{
+        display: inline-block !important;  
+    }
+
+
+    .checkbox:checked ~ .fa-bars{
+        visibility: hidden;
+    }
+    
+    .checkbox:checked ~ .fa-xmark{
+        visibility: visible;
+    }
+
+    .checkbox:checked ~ .nav{
+        display: flex;
+        flex-direction: column;
+        background-color: black;
+        position: fixed;
+        left: 0;
+        top: 70px;
+        max-width: 100% !important;
+    }
+
+    .nav-form__list{
+        flex-direction: column;
+        justify-content: center;        
+        align-items: center;
+        text-align: center;
+        margin-left: -30px;
+    }
+    
+    .nav-form__list-item{
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    .right-nav{
+        margin-top: 35px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .phone-number{
+        display: table;
+        text-align: center;
+        margin-right: 0;
+        margin-bottom: 10px;
+        margin-left: 110px;
+        width: 300px;
+    }
+    
+    
+    .phone-number a{
+        display: flex;
+        max-width: 100%;
+    }
+
+    .icons{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        margin-left: 10px;
+    }
+    
+    .icons a{
+        margin-left: 10px;
+    }
+
+    .icons:first-child{
+        margin-left: 0;
+    }
+
+}
+
+.main-hero{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white !important;
+}
+
+.main-hero h1{
+    font-size: 72px;
+    text-align: center;
+    color: white;
+    z-index: 10;    
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+.main-hero p {
+    z-index: 10;
+    font-size: 26px;
+    max-width: 700px;
+    width: 100%;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.main-hero a{
+    padding: 10px;
+    background-color: #ff623b;
+    padding: 20px 60px;
+    z-index: 99;
+    border-radius: 7px;
+    font-size: 18px;
+    font-weight: 700;
+    display: inline-block;
+    margin-top: 50px;
+}
+
+
+@media screen and (max-width:980px) {
+    
+    .main-hero h1 {
+        font-size: 68px;
+    }
+
+    .main-hero{
+        font-size: 20px;
+    }
+
+    .main-hero{
+        font-size: 16px;    
+    }
+
+}
+@media screen and (max-width:640px) {
+    
+    .main-hero h1 {
+        font-size: 30px;
+    }
+
+    .main-hero p {
+        font-size: 16px;
+    }
+
+    .br{
+        display: none;
+    }
+
+}
+
+@media screen and (max-width:640px) {
+    
+    .main-hero h1 {
+        font-size: 34px;
+    }
+
+
+    .br{
+        display: block;
+    }
+
+}
+
